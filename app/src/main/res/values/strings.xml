@@ -1,5 +1,24 @@
 <resources>
     <string name="app_name">CalHacks50</string>
 
-    <string name="sample_formula"> $$x=\\frac{1+y}{1+2z^2}$$</string>
+    <string name="sample_formula"> $$y=\\int_{x=10}^{x=\\infty}\\frac{1+y}{1+2z^2}$$</string>
+    <string name="sample_formula_2">$$a \\# b = 2a^2 - 3b^3$$ $$(3 \\# 2)\\#4$$"</string>
+    <string name="sample_topic">Sample Topic</string>
+    <string name="sample_text">Solve for x:</string>
+
+    <string name="hint_answer">Answer</string>
+
+    <string name="text_incorrect_username_or_password">Incorrect Username or Password. Please try again.</string>
+    <string name="text_already_exists">A user with that username already exists. Please try another username.</string>
+    <string name="text_register">Create An Account</string>
+    <string name="text_login">Login</string>
+
+    <string name="menu_prealgebra">Pre-Algebra</string>
+    <string name="menu_algebra">Algebra</string>
+    <string name="menu_advalgebra">Advanced Algebra</string>
+    <string name="menu_trigonometry">Trigonometry</string>
+    <string name="menu_diffcalc">Differential Calculus</string>
+    <string name="menu_intcalc">Integral Calculus</string>
+    <string name="menu_multivar">Multivariable Calculus</string>
+    <string name="menu_diffeq">Differential Equations</string>
 </resources>
