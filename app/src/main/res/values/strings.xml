@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CalHacks50</string>
+
+    <string name="sample_formula"> $$x=\\frac{1+y}{1+2z^2}$$</string>
+</resources>
