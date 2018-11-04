@@ -39,10 +39,10 @@ public class LoginViewModel extends ViewModel {
         eventData.setValue(loading);
         Disposable disposable = login.getLoginResponse(username, password).subscribeOn(Schedulers.io()).subscribe((result) -> {
             if(result.status.equals("success")) {
-                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, LoginData.SUCCESS, null);
+                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, new LoginData(LoginData.LoginDataEnum.SUCCESS, result.user_id, result.username), null);
                 eventData.postValue(loginDataResponse);
             } else {
-                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, LoginData.FAILURE, null);
+                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, new LoginData(), null);
                 eventData.postValue(loginDataResponse);
             }
         });
@@ -54,10 +54,10 @@ public class LoginViewModel extends ViewModel {
         eventData.setValue(loading);
         Disposable disposable = createAccount.getCreateAccountResponse(username, password).subscribeOn(Schedulers.io()).subscribe((result) -> {
             if(result.status.equals("success")) {
-                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, LoginData.SUCCESS, null);
+                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, new LoginData(LoginData.LoginDataEnum.SUCCESS, result.user_id, result.username), null);
                 eventData.postValue(loginDataResponse);
             } else {
-                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, LoginData.EXIST, null);
+                Response<LoginData> loginDataResponse = new Response<>(Status.COMPLETE, new LoginData(), null);
                 eventData.postValue(loginDataResponse);
             }
         });

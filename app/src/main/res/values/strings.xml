@@ -12,7 +12,7 @@
     <string name="text_already_exists">A user with that username already exists. Please try another username.</string>
     <string name="text_register">Create An Account</string>
     <string name="text_login">Login</string>
-    <string name="text_youve_solved">You have:</string>
+    <string name="text_youve_solved">You have</string>
     <string name="text_in_category">unsolved questions in this category.</string>
     <string name="text_solve_more">Solve More!</string>
 

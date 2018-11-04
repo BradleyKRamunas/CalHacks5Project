@@ -75,9 +75,10 @@ public class LoginActivity extends AppCompatActivity {
         progressBar.setVisibility(View.INVISIBLE);
         login.setEnabled(true);
         create.setEnabled(true);
-        switch(data) {
+        switch(data.status) {
             case SUCCESS:
                 Intent intent = new Intent(this, HomeActivity.class);
+                intent.putExtra("user_id", data.user_id);
                 startActivity(intent);
                 break;
             case FAILURE:
