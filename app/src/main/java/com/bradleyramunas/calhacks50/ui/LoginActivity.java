@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -24,6 +25,8 @@ public class LoginActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private TextView username;
     private TextView password;
+    private Button login;
+    private Button create;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +44,8 @@ public class LoginActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.login_ProgressBar_Loading);
         username = findViewById(R.id.login_EditText_Username);
         password = findViewById(R.id.login_EditText_Password);
+        login = findViewById(R.id.login_Button_Login);
+        create = findViewById(R.id.login_Button_Create);
     }
 
     private void handleResult(Response<LoginData> response) {
@@ -62,10 +67,14 @@ public class LoginActivity extends AppCompatActivity {
     private void onLoading() {
         failureTextView.setVisibility(View.INVISIBLE);
         progressBar.setVisibility(View.VISIBLE);
+        login.setEnabled(false);
+        create.setEnabled(false);
     }
 
     private void onComplete(LoginData data) {
         progressBar.setVisibility(View.INVISIBLE);
+        login.setEnabled(true);
+        create.setEnabled(true);
         switch(data) {
             case SUCCESS:
                 Intent intent = new Intent(this, HomeActivity.class);

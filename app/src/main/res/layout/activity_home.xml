@@ -7,15 +7,16 @@
     tools:context=".ui.HomeActivity">
 
     <FrameLayout
+        android:id="@+id/home_FrameLayout_Holder"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </FrameLayout>
+        android:layout_height="match_parent"></FrameLayout>
 
     <com.google.android.material.navigation.NavigationView
+        android:id="@+id/home_NavigationView_Drawer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
         android:layout_gravity="start"
-        app:menu="@menu/menu_navigation"/>
+        android:fitsSystemWindows="true"
+        app:menu="@menu/menu_navigation" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
