@@ -77,6 +77,7 @@ public class ScoreFragment extends Fragment {
         if(resultCode == 0) {
             unsolved -= 1;
             totalLabel.setText(unsolved + " out of " + total);
+            if(unsolved == 0) question.setEnabled(false);
         }
     }
 }
